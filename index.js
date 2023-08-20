@@ -38,16 +38,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 // app.use("/api", authRouter);
 // app.use("/api", fetchRouter);
-app.get("/token", (req, res) => {
-  const token = jwt.sign({ id: 7, role: "captain" }, "1123");
-  return res
-    .cookie("access_token", token, {
-      httpOnly: true,
-      secure: false,
-    })
-    .status(200)
-    .json({ message: "Logged in successfully 😊 👌" });
-});
+// app.get("/token", (req, res) => {
+//   const token = jwt.sign({ id: 7, role: "captain" }, "1123");
+//   return res
+//     .cookie("access_token", token, {
+//       httpOnly: true,
+//       secure: false,
+//     })
+//     .status(200)
+//     .json({ message: "Logged in successfully 😊 👌" });
+// });
 // app.get("/logout", (req, res) => {
 //   return res
 //     .cookie("access_token", "", {
